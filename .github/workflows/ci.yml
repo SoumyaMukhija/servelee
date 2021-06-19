@@ -24,7 +24,7 @@ jobs:
           go get -u golang.org/x/lint/golint 
           make lint
         
- test:
+  test:
     name: Test
     runs-on: ubuntu-latest
     steps:
