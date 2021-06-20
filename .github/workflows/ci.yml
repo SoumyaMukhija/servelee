@@ -40,22 +40,3 @@ jobs:
           go test ./... -v -coverprofile build/coverage.txt -coverpkg=./...
           go tool cover -func build/coverage.txt
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest 
-    needs: [lint, test]
-    steps:
-      - name: Set up Go
-        uses: actions/setup-go@v1
-        with:
-          go-version: ^1.12
-
-      - name: Check out code
-        uses: actions/checkout@v1
-
-      - name: Build
-        run: |
-        mkdir build
-        go build -o build/build
-
-
