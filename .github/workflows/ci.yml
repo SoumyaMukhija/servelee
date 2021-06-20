@@ -20,6 +20,7 @@ jobs:
 
       - name: Lint Go Code
         run: |
+          version: v1.29
           golangci-lint run --timeout 3m0s
         
   test:
