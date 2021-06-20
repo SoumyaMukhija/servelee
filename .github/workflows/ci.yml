@@ -56,6 +56,6 @@ jobs:
       - name: Build
         run: |
         mkdir build
-        go build -o build/build ./...
+        go build -o build/build
 
 
